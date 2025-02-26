@@ -56,7 +56,7 @@ def volimplicita(O, S, K, T, r, tol=1e-10, max_iter=700):
     return np.nan
 
 # Load Data File
-dir_arxiu = '/home/luis/Escritorio/material tfg/datos spx/datos_cboe_with_heston.csv'
+dir_arxiu = 'route'
 try:
     dades_opcions = pd.read_csv(dir_arxiu)
 except Exception as e:
@@ -90,7 +90,7 @@ for _, row in dades_opcions.iterrows():
 dades_opcions['Volatilitat implicita'] = vol_imp_calls
 
 # Save New File
-dir_arxiu_sortida = '/home/luis/Escritorio/material tfg/datos spx/volheston.csv'
+dir_arxiu_sortida = 'route'
 try:
     dades_opcions.to_csv(dir_arxiu_sortida, index=False)
     print(f"Archivo procesado y guardado en: {dir_arxiu_sortida}")
